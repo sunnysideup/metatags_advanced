@@ -39,7 +39,7 @@ class MetaTagCMSControlPages extends MetaTagCMSControlFiles
         'MetaDescription',
         'UpdateMenuTitle',
         'UpdateMetaDescription',
-        'Automatemetatags_advanced'
+        'AutomateMetatags'
     );
 
     /**
@@ -68,7 +68,7 @@ class MetaTagCMSControlPages extends MetaTagCMSControlFiles
                 foreach ($this->tableArray as $table) {
                     $rows = DB::query("SELECT \"$table\".\"ID\", \"$table\".\"Content\" FROM \"$table\" WHERE \"$table\".\"$fieldName\" = '' OR \"$table\".\"$fieldName\" IS NULL;");
                     foreach ($rows as $row) {
-                        $newValue = Convert::raw2sql(DBField::create_field("HTMLText", $row["Content"])->Summary(metatags_advancedSTE::$meta_desc_length, 15, ""));
+                        $newValue = Convert::raw2sql(DBField::create_field("HTMLText", $row["Content"])->Summary(MetatagsSTE::$meta_desc_length, 15, ""));
                         DB::query("UPDATE \"$table\" SET \"$fieldName\" = '$newValue' WHERE ID = ".$row["ID"]);
                     }
                 }
@@ -137,9 +137,9 @@ class MetaTagCMSControlPages extends MetaTagCMSControlFiles
                         if ($urlSegmentValue) {
                             $record->URLSegment = $urlSegmentValue;
                         }
-                    } elseif ($fieldName != "Automatemetatags_advanced") {
-                        //turn off Automatemetatags_advanced
-                        $record->Automatemetatags_advanced = 0;
+                    } elseif ($fieldName != "AutomateMetatags") {
+                        //turn off AutomateMetatags
+                        $record->AutomateMetatags = 0;
                     }
 
                     $record->writeToStage("Stage");
@@ -176,7 +176,7 @@ class MetaTagCMSControlPages extends MetaTagCMSControlFiles
      */
     public function SeparateMetaTitle()
     {
-        return Config::inst()->get("metatags_advancedContentControllerEXT", "use_separate_metatitle") == 1;
+        return Config::inst()->get("metatagsContentControllerEXT", "use_separate_metatitle") == 1;
     }
 
     /**
@@ -203,7 +203,7 @@ class MetaTagCMSControlPages extends MetaTagCMSControlFiles
                 if (strtolower($page->MenuTitle) == strtolower($page->Title)) {
                     $page->MenuTitleIdentical = true;
                 }
-                if ($this->mySiteConfig()->UpdateMenuTitle && $page->Automatemetatags_advanced) {
+                if ($this->mySiteConfig()->UpdateMenuTitle && $page->AutomateMetatags) {
                     $page->MenuTitleAutoUpdate = true;
                 }
                 $className = $this->tableArray[0];

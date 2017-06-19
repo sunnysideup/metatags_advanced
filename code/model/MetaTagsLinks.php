@@ -1,6 +1,6 @@
 <?php
 
-class metatags_advancedLinks extends DataObject
+class MetatagsLinks extends DataObject
 {
 
         //database

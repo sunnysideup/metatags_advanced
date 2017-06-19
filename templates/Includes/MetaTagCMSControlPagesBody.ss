@@ -19,7 +19,7 @@
 		</td>
 
 		<td class="auto">
-			<input type="checkbox" value="1" id="Automatemetatags_advanced_{$ID}" name="Automatemetatags_advanced_{$ID}"<% if Automatemetatags_advanced %> checked="checked" <% end_if %> />
+			<input type="checkbox" value="1" id="AutomateMetatags_{$ID}" name="AutomateMetatags_{$ID}"<% if AutomateMetatags %> checked="checked" <% end_if %> />
 		</td>
 
 		<td class="menu">

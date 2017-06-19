@@ -113,8 +113,8 @@
 						<ul>
 							<li>follow rules?
 								<ul>
-									<li><a href="{$Link}setpageflag/Automatemetatags_advanced/1/" class="setpageflag ajaxify" rel="Automatemetatags_advanced">all pages</a></li>
-									<li><a href="{$Link}setpageflag/Automatemetatags_advanced/0/" class="setpageflag ajaxify" rel="Automatemetatags_advanced">none of the pages</a></li>
+									<li><a href="{$Link}setpageflag/AutomateMetatags/1/" class="setpageflag ajaxify" rel="AutomateMetatags">all pages</a></li>
+									<li><a href="{$Link}setpageflag/AutomateMetatags/0/" class="setpageflag ajaxify" rel="AutomateMetatags">none of the pages</a></li>
 								</ul>
 							</li>
 						</ul>
