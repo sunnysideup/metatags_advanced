@@ -1,7 +1,7 @@
 {
     "name": "sunnysideup/metatags_advanced",
     "type": "silverstripe-module",
-    "description": "simplify your metatags_advanced - a ton of tools to increase SEO visibility, including file name adjustments",
+    "description": "Bulk edit your metatag data for pages and files",
     "keywords": [
         "Silverstripe-CMS",
         "CMS",
@@ -12,6 +12,7 @@
         "filenames",
         "meta tags",
         "meta data",
+        "bulk",
         "google"
     ],
     "license": "Sunny Side Up (BSD-3-Clause and CUSTOM)",
@@ -24,7 +25,8 @@
     ],
     "require": {
         "silverstripe/framework": "~3.1",
-        "silverstripe/cms": "~3.1"
+        "silverstripe/cms": "~3.1",
+        "sunnysideup/metatags": "*"
     },
     "extra": {
         "installer-name": "metatags_advanced"
