@@ -1,4 +1,4 @@
-# Contributing to metatags_advanced
+# Contributing to metatags advanced
 
 Please read the
 [generic write up for contributing](https://docs.silverstripe.org/en/4.0/contributing/)

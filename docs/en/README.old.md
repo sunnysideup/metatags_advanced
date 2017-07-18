@@ -1,4 +1,4 @@
-# Silverstripe metatags advanced module
+# Silverstripe metatags_advanced module
 [![Build Status](https://travis-ci.org/sunnysideup/silverstripe-metatags_advanced.svg?branch=master)](https://travis-ci.org/sunnysideup/silverstripe-metatags_advanced)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sunnysideup/silverstripe-metatags_advanced/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/sunnysideup/silverstripe-metatags_advanced/?branch=master)
 [![codecov.io](https://codecov.io/github/sunnysideup/silverstripe-metatags_advanced/coverage.svg?branch=master)](https://codecov.io/github/sunnysideup/silverstripe-metatags_advanced?branch=master)
